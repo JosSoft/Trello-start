@@ -22,19 +22,11 @@ function getRandomizerByChance(...variants) {
     }
 }
 
-const variants = {
-    a: 0,
-    b: 0,
-    c: 0
-}
+const variants = { a: 0, b: 0, c: 0, d: 0, e: 0 }
 
-const randomizer = getRandomizerByChance(
-    'a', 10,
-    'b', 10,
-    'c', 10
-)
+const randomizer = getRandomizerByChance('a', 20, 'b', 30, 'c', 40, 'd', 5, 'e', 100)
 
-for (let i = 0; i < 15 * 10 ** 6; i++) {
+for (let i = 0; i < 15 * 10 ** 3; i++) {
     const key = randomizer()
     variants[key]++
 }
